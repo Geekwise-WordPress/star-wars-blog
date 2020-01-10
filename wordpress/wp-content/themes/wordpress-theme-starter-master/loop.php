@@ -1,4 +1,8 @@
-<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+<?php 
+	/*	Template Name: Latest Posts
+		Template Post Type: Post */
+	if (have_posts()): while (have_posts()) : the_post(); ?>
+
 
 <!-- Dynamically adding alt text to variable -->
 		<?php $thumbnail_id  = get_post_thumbnail_id( $post->ID ); ?>
@@ -30,14 +34,25 @@
 		</div>
 	</article>
 	<!-- /article -->
-		<div class='padding py-0'>
+		<div class="grid">
 			<!-- post details -->
-			<span class="post-info byline-author"><?php _e( 'By:', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
+			<div class="grid-temp">
+				<div class="item1">
+					<span class="post-info byline-author"><?php _e( 'By:', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
 
-			<div class="post-info byline-date d-flex">
-				<?php the_category();?>&nbsp// <?php the_time('F j, Y'); ?>
+					<div class="post-info byline-date d-flex">
+						<?php the_category();?>&nbsp// <?php the_time('F j, Y'); ?>	
+					</div>	
+				</div>			  
+				<!-- /post details -->
+
+				<!-- Code to use the Advanced Custom Fields Image -->
+				<div class="item2">
+				<?php if( get_field('profile_picture') ): ?>
+				<img class="profile-picture" src="<?php the_field('profile_picture'); ?>" />
+				<?php endif; ?>
+				</div>
 			</div>
-			<!-- /post details -->
 		</div>
 <?php endwhile; ?>
 
