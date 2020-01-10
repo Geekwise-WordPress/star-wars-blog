@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<main role="main" class="home">
+	<main role="main" class="home container">
 		<!-- section -->
 		<section>
 
