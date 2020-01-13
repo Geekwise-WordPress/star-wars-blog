@@ -32,8 +32,6 @@
 				<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
 			</div>
 		</div>
-	</article>
-	<!-- /article -->
 		<div class="grid">
 			<!-- post details -->
 			<div class="grid-temp">
@@ -54,6 +52,9 @@
 				</div>
 			</div>
 		</div>
+	</article>
+	<!-- /article -->
+	<div class="border-black"></div>
 <?php endwhile; ?>
 
 <?php else: ?>
