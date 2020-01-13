@@ -118,7 +118,7 @@
     .grid-temp {
       display: grid;
       position: relative;
-      grid-template-columns: auto 50px;
+      grid-template-columns: auto 63.75px;
       height: 100%;
       width: 100%;
     }
@@ -129,6 +129,8 @@
       width: 100%;
       height: 100%;
       margin: 0;
+      margin-top: 15px;
+      padding-left: 1rem;
     }
     .item2 {
       position: relative;
