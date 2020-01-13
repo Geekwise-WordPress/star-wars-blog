@@ -260,5 +260,9 @@ html {
   height: 100%;
   object-fit: cover;
 }
+.home .border-black {
+  background-color: black;
+  height: 2rem;
+}
 
 /*# sourceMappingURL=style.css.map */
